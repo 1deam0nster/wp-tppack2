@@ -26,27 +26,32 @@
 
     <div class="container-xxl">
       <div class="row">
-        ${ require('./partials/menu.html') }
+        <aside class="pt-5 col-md-4 col-lg-3 col-xl-3 d-md-block sidebar collapse ">
+          ${ require('./partials/menu.html') }
+        </aside>
         <main class="col-md-8 col-lg-9 col-xl-9 ms-sm-auto px-md-4">
           <div class="container pt-5">
             <section>
               <h2>Контакты</h2>
               <div class="info">
-          <a class="map " href="https://yandex.ru/maps/org/upakovka_deshevo_rf/140511181578/?ll=38.392927%2C55.842550&amp;z=16.57">
-            <span class="text-dark">г. Москва, ул. 1 Боевская, 2/12с3</span>
-          </a>
-          <div class="time">
-            <span class="text-dark">Пн-Пт с 9:00 до 19:00 / Сб-Вс с 10:00 до 18:00</span>
-          </div>
-          <div class="mail">
-            <a class="text-dark" href="mailto:tppackru@yandex.ru">tppackru@yandex.ru</a>
-          </div>
-          <div class="phone">
-            <a href="tel:+7 (495) 983-58-64" class="text-dark">+7 (495) 983-58-64</a>
-          </div>
-        </div>
-              <iframe src="https://yandex.ru/map-widget/v1/?ll=37.692150%2C55.792574&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc0Njk0NBJF0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsIDEt0Y8g0JHQvtC10LLRgdC60LDRjyDRg9C70LjRhtCwLCAyLzEy0YEzIgoNFMQWQhVxK19C&amp;utm_campaign=desktop&amp;utm_medium=search&amp;utm_source=maps&amp;z=17.05" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-          
+                <a class="map "
+                  href="https://yandex.ru/maps/org/upakovka_deshevo_rf/140511181578/?ll=38.392927%2C55.842550&amp;z=16.57">
+                  <span class="text-dark">г. Москва, ул. 1 Боевская, 2/12с3</span>
+                </a>
+                <div class="time">
+                  <span class="text-dark">Пн-Пт с 9:00 до 19:00 / Сб-Вс с 10:00 до 18:00</span>
+                </div>
+                <div class="mail">
+                  <a class="text-dark" href="mailto:tppackru@yandex.ru">tppackru@yandex.ru</a>
+                </div>
+                <div class="phone">
+                  <a href="tel:+7 (495) 983-58-64" class="text-dark">+7 (495) 983-58-64</a>
+                </div>
+              </div>
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.692150%2C55.792574&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc0Njk0NBJF0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsIDEt0Y8g0JHQvtC10LLRgdC60LDRjyDRg9C70LjRhtCwLCAyLzEy0YEzIgoNFMQWQhVxK19C&amp;utm_campaign=desktop&amp;utm_medium=search&amp;utm_source=maps&amp;z=17.05"
+                width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+
             </section>
           </div>
       </div>
@@ -54,7 +59,18 @@
     </div>
   </div>
 
-
+  <!-- Offcanvas -->
+  <div class="offcanvas-collapse" id="offcanvasMenu">
+    <div class="offcanvas-header py-3">
+      <a href="/" class="navbar-brand logo-block px-2">
+        <img src="${ require('src/assets/images/logo.svg') }" alt="TPPACK" width="32px" class="logo">
+        <p class="logo-text text-white" href="#">TPPACK</p>
+      </a>
+    </div>
+    <div class="offcanvas-body mt-2">
+      ${ require('./partials/menu.html') }
+    </div>
+  </div>
 
   ${ require('./partials/footer.html') }
 

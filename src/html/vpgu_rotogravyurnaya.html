@@ -26,7 +26,9 @@
 
     <div class="container-xxl">
       <div class="row">
-        ${ require('./partials/menu.html') }
+        <aside class="pt-5 col-md-4 col-lg-3 col-xl-3 d-md-block sidebar collapse ">
+          ${ require('./partials/menu.html') }
+        </aside>
         <main class="col-md-8 col-lg-9 col-xl-9 ms-sm-auto px-md-4">
           <div class="container pt-5">
             <section>
@@ -72,18 +74,40 @@
                   <br>
                   <br>
                   <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
             </section>
           </div>
       </div>
       </main>
     </div>
-  </div>
 
+  <!-- Offcanvas -->
+  <div class="offcanvas-collapse" id="offcanvasMenu">
+    <div class="offcanvas-header py-3">
+      <a href="/" class="navbar-brand logo-block px-2">
+        <img src="${ require('src/assets/images/logo.svg') }" alt="TPPACK" width="32px" class="logo">
+        <p class="logo-text text-white" href="#">TPPACK</p>
+      </a>
+    </div>
+    <div class="offcanvas-body mt-2">
+      ${ require('./partials/menu.html') }
+    </div>
+  </div>
 
 
   ${ require('./partials/footer.html') }
+</div>
 
-  </div>
+
+
+
+
+</div>
 </body>
 
 </html>

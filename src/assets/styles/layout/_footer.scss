@@ -4,18 +4,31 @@
 .footer {
   color: var(--text-color);
   background-color: var(--primary-color);
+  // position: fixed;
+  // left: 0;
+  // bottom: 0;
+  // width: 100%;
+}
+.map, .time, .phone, .mail {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 500px) {
+
+.footer{
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  font-size:0.8rem;
 }
-// @media (max-width: 500px) {
 
-//   // .footer>.container-xxl>.row>.map,
-//   // .footer>.container-xxl>.row>.mail,
-//   // .footer>.container-xxl>.row>.time{
-//   //   display:none;
-//   // }
+.map, .time, .phone, .mail {
+  display: flex;
+  justify-content: flex-start;
+}
 
-// }
+}
 

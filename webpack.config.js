@@ -105,7 +105,7 @@ module.exports = function (env, args) {
           loader: 'babel-loader',
         },
         {
-          test: /\.(png|svg|jpe?g|gif|webp)$/,
+          test: /\.(png|svg|jpe?g|gif|webp|mp4)$/,
           type: 'asset/resource',
           generator: {
             filename: 'images/[name][ext]',
