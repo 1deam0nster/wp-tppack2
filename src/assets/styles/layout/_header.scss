@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// Header of the site/application
+// -----------------------------------------------------------------------------
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+
+}
+
+.header-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 32px;
+	padding-right: 8px;
+} 
+
+.logo-block {
+	display: flex;
+	align-items: center;
+	// padding: 0 100px 0 22px;
+}
+
+.logo-text {
+	margin: 0 0 0 0;
+}
+
+.info-block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 14px;
+	color: black;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  flex-direction: row;
+}
+
+// .map,
+// .mail>a,
+// .phone>a {
+// 	text-decoration: none;
+// }
+
+
+@media (max-width: 500px) {
+	.info-block {
+        display:none;
+    }
+}

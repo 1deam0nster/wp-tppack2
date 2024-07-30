@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доставка и оплата</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Reuta Dmitry">
+  <meta name="robots" content="index, follow">
+
+  <!-- <link rel="canonical" href="[URL страницы]"> -->
+
+  ${ require('./partials/head.html') }
+</head>
+
+<body>
+
+
+  ${ require('src/html/partials/browserupgrade.html') }
+
+  <div class="d-flex flex-column h-100 grid">
+
+    ${ require('src/html/partials/header.html') }
+
+    <div class="container-xxl">
+      <div class="row">
+        ${ require('./partials/menu.html') }
+        <main class="col-md-8 col-lg-9 col-xl-9 ms-sm-auto px-md-4">
+          <div class="container pt-5">
+            <section>
+              <h2>Доставка и оплата</h2>
+              Доставляем со склада в г. Ногинске в любые регионы России, так же возможен самовывоз. Подробности уточняйте у наших менеджеров, мы всегда клиентоориентированы и подберем для вас оптимальный способ отгрузки.
+              <ul>
+                  <li>Мы осуществляем доставку как автомобильным, так и железнодорожным транспортом.</li>
+                  <li>Самовывоз продукции осуществляется со склада в г. Ногинск, 1-й Кардолентный пр., 5.</li>
+                  <li>При заказе от 30 000 этикеток доставка до клиента бесплатная.</li>
+              </ul>
+            </section>
+          </div>
+      </div>
+      </main>
+    </div>
+  </div>
+
+
+
+  ${ require('./partials/footer.html') }
+
+  </div>
+</body>
+
+</html>

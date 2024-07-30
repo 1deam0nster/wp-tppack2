@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// Footer of the site/application
+// -----------------------------------------------------------------------------
+.footer {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+// @media (max-width: 500px) {
+
+//   // .footer>.container-xxl>.row>.map,
+//   // .footer>.container-xxl>.row>.mail,
+//   // .footer>.container-xxl>.row>.time{
+//   //   display:none;
+//   // }
+
+// }
+
