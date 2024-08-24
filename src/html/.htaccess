@@ -1,0 +1,101 @@
+# Антиспам бот
+RewriteEngine on
+php_value auto_prepend_file "/home/c/cg57569/TPPack/public_html/protect/code/include.php"
+
+# Включение символических ссылок и отключение MultiViews
+Options +FollowSymLinks -MultiViews
+
+# Включение механизма переписывания URL
+RewriteEngine On
+RewriteBase /
+
+# Удаление расширения .html из URL
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=302,NE,L]
+
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [L,R=302,NC,NE]
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Настройка кэширования для статических файлов
+<FilesMatch "\.(ico|pdf|svg|flv|jpg|jpeg|png|gif|js|css|swf|woff|ttf|json)$">
+    Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+
+# Включение сжатия для указанных типов файлов
+<ifModule mod_deflate.c>
+    <FilesMatch "\.(js|css|html|php|svg|png|jpeg|jpg|ttf|json)$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</ifModule>
+
+#Перенаправление с www на без www 
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.tppack\.ru$ [NC]
+RewriteRule ^(.*)$ http://tppack.ru/$1 [R=301,L]
+</IfModule>
+
+#Перенаправление с http на https 
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP:X-HTTPS} !1
+RewriteCond %{REQUEST_URI} !robots.txt
+RewriteRule ^(.*)$ https://example.ru/$1 [R=301,L]
+
+#404 Страница не найдена
+ErrorDocument 404 http://tppack.ru/404.html
+
+#Перенаправление старых путей страниц в индексе
+Redirect 301 /catalog http://tppack.ru/index.html
+Redirect 301 /flexible_packaging http://tppack.ru/vpgu_fleksopechat.html
+Redirect 301 /kartonnye-korobki http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok http://tppack.ru/mat.html
+Redirect 301 /product http://tppack.ru/vgu.html
+Redirect 301 /product-category http://tppack.ru/vgu.html
+Redirect 301 /rolevaya-ofsetnaya-pechat http://tppack.ru/vgu.html
+Redirect 301 /services http://tppack.ru/index.html
+Redirect 301 /upakovka-iz-kartona http://tppack.ru/index.html
+Redirect 301 /packages/fleksopechat-po-pnd-pvd-bopp http://tppack.ru/index.html
+Redirect 301 /paper-kraft-bags http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/po-tipu-primeneniya http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/po-tipu-primeneniya http://tppack.ru/index.html
+Redirect 301 /upakovka-iz-kartona/samosbornye-koroba http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-roma http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-limonchello http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-korma-dlya-zhivotnyh http://tppack.ru/index.html
+Redirect 301 /product/paper_kraft-bags/building-mix-bags/pakety-dlya-stroitelnyh-smesej http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-shampanskogo http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-samogona http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-piva http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-mediczinskih-izdelij http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-zhidkogo-myla http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/samokleyashhiesya-etiketki http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-knig http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-banok http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-chaya http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/dlya-alkogolya http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-viski http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/dlya-kosmetiki http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-myla http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-ozon http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-shampunya http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-konyaka http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/pechat-nakleek http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-kremov http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/dlya-vajldberriz http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-likera http://tppack.ru/index.html
+Redirect 301 /product/pechat-etiketok/samokleyashhiesya-etiketki/etiketki-dlya-parfyuma http://tppack.ru/index.html
+Redirect 301 /pechat-etiketok/etiketki-dlya-marketpleysov http://tppack.ru/index.html
+Redirect 301 /product/kruglye-etiketki http://tppack.ru/index.html
+Redirect 301 /product/bumazhnye-etiketki http://tppack.ru/index.html

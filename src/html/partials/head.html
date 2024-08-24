@@ -26,3 +26,13 @@
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/97882876" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
+<!-- Antibot -->
+ <script>
+     var abc = new XMLHttpRequest();
+     var microtime = Date.now();
+     var abcbody = "t="+microtime+"&w="+screen.width+"&h="+ screen.height+"&cw="+document.documentElement.clientWidth+"&ch="+document.documentElement.clientHeight;
+     abc.open("POST", "/protect/8.php", true);
+     abc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+     abc.send(abcbody);
+</script>
+<!-- Antibot -->

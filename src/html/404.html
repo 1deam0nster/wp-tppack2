@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
+
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Такой страницы не существует</title>
+  <meta name="author" content="Reuta Dmitry">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="canonical" href="[URL страницы]"> -->
 
   ${ require('./partials/head.html') }
-
 </head>
+
 <body>
 
-${ require('src/html/partials/browserupgrade.html') }
 
-<div class="d-flex flex-column h-100">
+  ${ require('src/html/partials/browserupgrade.html') }
 
-  ${ require('src/html/partials/header.html') }
+  <div class="d-flex flex-column h-100 grid">
 
-  <main class="d-flex h-100 align-items-center">
-    <div class="container">
-      <div class="row justify-content-center">
-        <section class="col-7">
-          <h1>Page Not Found!</h1>
-          <p class="lead">Sorry, but the page you were trying to view does not exist.</p>
-        </section>
+    ${ require('src/html/partials/header.html') }
+
+
+
+          
+<!-- Error 404 Template 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <h2 class="d-flex justify-content-center align-items-center gap-2 mb-4">
+            <span class="display-1 fw-bold">4</span>
+            <i class="bi bi-exclamation-circle-fill text-danger display-4">0</i>
+            <span class="display-1 fw-bold bsb-flip-h">4</span>
+          </h2>
+          <h3 class="h2 mb-2">Сожалеем</h3>
+          <p class="mb-5">Такой страницы не существует</p>
+          <a class="btn bsb-btn-5xl btn-dark rounded-pill px-5 fs-6 m-0" href="/" role="button">На главную</a>
+        </div>
       </div>
     </div>
-  </main>
+  </div>
+</section>
+        
 
-  ${ require('./partials/footer.html') }
 
-</div>
-</body>
-</html>
+  </div>
