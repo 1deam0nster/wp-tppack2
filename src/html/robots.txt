@@ -1,5 +1,4 @@
 Sitemap: https://tppack.ru/sitemap.xml
 Crawl-delay: 5
 User-agent: *
-Allow: /
 Disallow: /404.html
