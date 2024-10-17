@@ -28,30 +28,18 @@
 
     <div class="container-xxl">
       <div class="row">
-        <aside class="pt-5 col-md-4 col-lg-3 col-xl-3 d-md-block sidebar collapse ">
-          ${ require('./partials/menu.html') }
-        </aside>
 
-        <main class="col-md-8 col-lg-9 col-xl-9 ms-sm-auto px-md-4">
+
+        <main class="col-md-12 col-lg-12 col-xl-12 ms-sm-auto px-md-4">
           <div class="container pt-5">
+
+
             <section>
-              <h1>Гибкая упаковка</h1>
-              <div class="row align-items-start">
-                <div class="col">
-                  <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
-                    alt="Наше производство">
-                </div>
-                <div class="col">
-                  <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
-                    alt="Печать гибкой упаковки">
-                </div>
-                <div class="col">
-                  <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
-                    alt="Печать на гибкой ленте">
-                </div>
-              </div>
-              <h2>Рулонная печать гибкой упаковки</h2>
-              <p>ПГибкая упаковка находит широкое применение и имеет немаловажное значение в
+              ${ require('src/html/partials/services.html') }
+              ${ require('src/html/partials/bonuses.html') }
+              ${ require('src/html/partials/form.html') }
+              <h2 class="pt-5">Рулонная печать гибкой упаковки</h2>
+              <p>Гибкая упаковка находит широкое применение и имеет немаловажное значение в
                 современной торгово-промышленной деятельности, она представляет из себя
                 полимерный материал с нанесенным фирменным знаком компании, указанием свойств
                 продукции, характеристик и другой достоверной, полезной информацией для
@@ -80,31 +68,59 @@
                 квалифицированные услуги опытных дизайнеров для создания превосходных
                 уникальных макетов гибкой упаковки с незамедлительным запуском на производстве
                 и организацией доставки.</p>
-              <div class="row align-items-start">
-                <div class="col">
+
+                <h1 class="is-size-2 pt-5 text-center">Гибкая упаковка:</h1>
+                <div class="row align-items-start">
+                  <div class="col">
+                    <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Наше производство">
+                  </div>
+                  <div class="col">
+                    <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Печать гибкой упаковки">
+                  </div>
+                  <div class="col">
+                    <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Печать на гибкой ленте">
+                  </div>
+                </div>
+              
+              <br>
+              <br>
+              <br>
+              <div class="row align-items-start ">
+                <h2 class="is-size-2 text-center p-2">Видео изготовления гибкой упаковки:</h2>
+                <div class="col d-flex justify-content-center">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/1.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
-                <div class="col">
+                <div class="col d-flex justify-content-center">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/2.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
-                <div class="col">
+                <div class="col d-flex justify-content-center">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/3.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
               </div>
+              ${ require('src/html/partials/partners.html') }
+              ${ require('src/html/partials/delivery.html') }
+              <br>
+              <br>
+              <br>
+              <br>
               <br>
               <br>
               <br>
               <br>
             </section>
+
           </div>
       </div>
       </main>
