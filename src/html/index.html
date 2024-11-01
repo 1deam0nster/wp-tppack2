@@ -28,16 +28,40 @@
 
     <div class="container-xxl">
       <div class="row">
+        <aside class="pt-5 col-md-4 col-lg-3 col-xl-3 d-md-block sidebar collapse ">
+          ${ require('./partials/menu.html') }
+        </aside>
 
-
-        <main class="col-md-12 col-lg-12 col-xl-12 ms-sm-auto px-md-4">
+        <main class="col-md-8 col-lg-9 col-xl-9 ms-sm-auto px-md-4">
           <div class="container pt-5">
 
 
             <section>
-              ${ require('src/html/partials/services.html') }
+                <!-- <h1 class="is-size-2 pt-5 text-center">Гибкая упаковка:</h1> -->
+                <!-- <h2 class="pb-2 border-bottom text-center">Гибкая упаковка:</h2> -->
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Печать и изготовление гибкой упаковки:</h1>
+
+                <div class="row align-items-start pb-5">
+                  <div class="col">
+                    <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Наше производство">
+                  </div>
+                  <div class="col">
+                    <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Печать гибкой упаковки">
+                  </div>
+                  <div class="col">
+                    <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
+                      alt="Печать на гибкой ленте">
+                  </div>
+                </div>
+
+                <div class="pt-3 pb-5 text-center">
+                  <a href="tel:+79016348239" class="btn btn-success btn-lg text-center text-uppercase">Позвонить сейчас и
+                    получить скидку</a>
+              </div>
+
               ${ require('src/html/partials/bonuses.html') }
-              ${ require('src/html/partials/form.html') }
               <h2 class="pt-5">Рулонная печать гибкой упаковки</h2>
               <p>Гибкая упаковка находит широкое применение и имеет немаловажное значение в
                 современной торгово-промышленной деятельности, она представляет из себя
@@ -68,28 +92,15 @@
                 квалифицированные услуги опытных дизайнеров для создания превосходных
                 уникальных макетов гибкой упаковки с незамедлительным запуском на производстве
                 и организацией доставки.</p>
-
-                <h1 class="is-size-2 pt-5 text-center">Гибкая упаковка:</h1>
-                <div class="row align-items-start">
-                  <div class="col">
-                    <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Наше производство">
-                  </div>
-                  <div class="col">
-                    <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Печать гибкой упаковки">
-                  </div>
-                  <div class="col">
-                    <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Печать на гибкой ленте">
-                  </div>
-                </div>
               
               <br>
               <br>
               <br>
               <div class="row align-items-start ">
-                <h2 class="is-size-2 text-center p-2">Видео изготовления гибкой упаковки:</h2>
+                <!-- <h2 class="is-size-2 text-center p-2">Видео изготовления гибкой упаковки:</h2>     -->
+                <!-- <h2 class="pb-2 mb-4 border-bottom text-center">Видео изготовления гибкой упаковки:</h2> -->
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Видео изготовления гибкой упаковки:</h1>
+
                 <div class="col d-flex justify-content-center">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/1.mp4') }" type="video/mp4">
@@ -108,9 +119,13 @@
                     Браузер не поддерживает видео
                   </video>
                 </div>
+              <div class="pt-5 text-center">
+                  <a href="tel:+79016348239" class="btn btn-success btn-lg text-center text-uppercase">Заказать печать гибкой упаковки</a>
+              </div>
               </div>
               ${ require('src/html/partials/partners.html') }
               ${ require('src/html/partials/delivery.html') }
+              ${ require('src/html/partials/form.html') }
               <br>
               <br>
               <br>
