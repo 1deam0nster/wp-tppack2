@@ -1,5 +1,7 @@
 .form{
     max-width: 320px;
+    display: flex;
+    width: 100%;
 }
 
 // #abdc42
@@ -20,3 +22,11 @@
     --bs-btn-disabled-bg: #abdc42;
     --bs-btn-disabled-border-color: #abdc42;
   }
+
+  .nowrap{
+    white-space:nowrap;
+  }
+
+.bd-placeholder-img{
+  filter: brightness(40%)
+}

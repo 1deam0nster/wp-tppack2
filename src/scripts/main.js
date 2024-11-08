@@ -71,4 +71,51 @@ $(document).ready(function () {
         $('#offcanvasMenu').removeClass('open');
       }
     });
+
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+      var th = $(this);
+      $.ajax({
+        type: "POST",
+        url: "mail.php", //Change
+        data: th.serialize()
+      }).done(function() {
+        alert("Thank you!");
+        setTimeout(function() {
+          // Done Functions
+          th.trigger("reset");
+        }, 1000);
+      });
+      return false;
+    });
+    
   });
+
+  // document.addEventListener("DOMContentLoaded", function() {
+  
+  //   // Обработка отправки формы
+  //   document.querySelectorAll("form").forEach(function(form) {
+  //     form.addEventListener("submit", function(event) {
+  //       event.preventDefault(); // предотвращаем стандартное поведение отправки
+  
+  //       const formData = new FormData(form); // собираем данные формы
+  
+  //       fetch("mail.php", {
+  //         method: "POST",
+  //         body: formData
+  //       })
+  //       .then(response => {
+  //         if (response.ok) {
+  //           alert("Thank you!");
+  //           setTimeout(function() {
+  //             form.reset(); // сбрасываем форму
+  //           }, 1000);
+  //         } else {
+  //           throw new Error("Network response was not ok.");
+  //         }
+  //       })
+  //       .catch(error => console.error("There has been a problem with your fetch operation:", error));
+  //     });
+  //   });
+  
+  // });

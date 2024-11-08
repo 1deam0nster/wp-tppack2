@@ -22,7 +22,7 @@
 
   ${ require('src/html/partials/browserupgrade.html') }
 
-  <div class="d-flex flex-column h-100 grid">
+  <div class="d-flex flex-column h-200 grid">
 
     ${ require('src/html/partials/header.html') }
 
@@ -37,28 +37,81 @@
 
 
             <section>
-                <!-- <h1 class="is-size-2 pt-5 text-center">Гибкая упаковка:</h1> -->
-                <!-- <h2 class="pb-2 border-bottom text-center">Гибкая упаковка:</h2> -->
-                <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Печать и изготовление гибкой упаковки:</h1>
+              <!-- <h1 class="is-size-2 pt-5 text-center">Гибкая упаковка:</h1> -->
+              <!-- <h2 class="pb-2 border-bottom text-center">Гибкая упаковка:</h2> -->
+              <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Печать и
+                изготовление гибкой упаковки:</h1>
 
-                <div class="row align-items-start pb-5">
-                  <div class="col">
-                    <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Наше производство">
+              <!-- <div class="row align-items-start pb-5">
+                <div class="col">
+                  <img src="${ require('src/assets/images/5.webp') }" class="img-fluid rounded mx-auto"
+                    alt="Наше производство">
+                </div>
+                <div class="col">
+                  <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
+                    alt="Печать гибкой упаковки">
+                </div>
+                <div class="col">
+                  <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
+                    alt="Печать на гибкой ленте">
+                </div>
+              </div> -->
+
+              <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active carousel-item-start">
+                    
+                    <img src="${ require('src/assets/images/6.webp') }" class="bd-placeholder-img" width="100%" height="100%"  focusable="false">
+                    <div class="container">
+                      <div class="carousel-caption text-start d-none d-sm-block">
+                        <h1>Изготовление этикеток методом флексографии</h1>
+                        <p class="opacity-75">Флексопечать подразумевает промышленное изготовление гибкого клише и нанесение превосходных изображений с тщательной детализацией на картон, пластик, целлофановые пакеты, бумажную упаковку.</p>
+                        <p><a class="btn btn-lg btn-primary" href="vpgu_fleksopechat.html">Подробнее</a></p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <img src="${ require('src/assets/images/2.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Печать гибкой упаковки">
+                  <div class="carousel-item carousel-item-next carousel-item-start">
+                    <img src="${ require('src/assets/images/2.webp') }" class="bd-placeholder-img" width="100%" height="100%"  focusable="false">
+                    <div class="container">
+                      <div class="carousel-caption d-none d-sm-block">
+                        <h1>Производство рекламной упаковки</h1>
+                        <p>Одним из основополагающих факторов является подбор вида печати гибкой упаковки, влияющего на внешний облик товара, его презентабельность, функциональность и стоимость продукции. </p>
+                        <p><a class="btn btn-lg btn-primary" href="vpgu.html">Подробнее</a></p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <img src="${ require('src/assets/images/6.webp') }" class="img-fluid rounded mx-auto"
-                      alt="Печать на гибкой ленте">
+                  <div class="carousel-item">
+                    <img src="${ require('src/assets/images/5.webp') }" class="bd-placeholder-img" width="100%" height="100%"  focusable="false">
+                    <div class="container">
+                      <div class="carousel-caption text-end d-none d-sm-block">
+                        <h1>Ротогравюрная печать</h1>
+                        <p>Ротогравюрная печать или иначе глубокая печать гибкой упаковки осуществляется, в отличие от флексографии, с использованием металлического клише. Вал с тщательно проработанным рисунком позволяет нанести предельно четкое изображение на печатный материал.</p>
+                        <p><a class="btn btn-lg btn-primary" href="vpgu_rotogravyurnaya.html">Подробнее</a></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
 
-                <div class="pt-3 pb-5 text-center">
-                  <a href="tel:+79016348239" class="btn btn-success btn-lg text-center text-uppercase">Позвонить сейчас и
-                    получить скидку</a>
+              <div class="pt-3 pb-5 text-center">
+                <a href="tel:+79391110534"
+                  class="btn btn-success btn-lg text-center text-uppercase d-block d-sm-none">Позвонить сейчас и
+                  получить скидку</a>
+                  <a href="#form"
+                  class="btn btn-success btn-lg text-center text-uppercase d-none d-sm-block">Получить скидку</a>
               </div>
 
               ${ require('src/html/partials/bonuses.html') }
@@ -92,36 +145,38 @@
                 квалифицированные услуги опытных дизайнеров для создания превосходных
                 уникальных макетов гибкой упаковки с незамедлительным запуском на производстве
                 и организацией доставки.</p>
-              
+
               <br>
               <br>
               <br>
               <div class="row align-items-start ">
                 <!-- <h2 class="is-size-2 text-center p-2">Видео изготовления гибкой упаковки:</h2>     -->
                 <!-- <h2 class="pb-2 mb-4 border-bottom text-center">Видео изготовления гибкой упаковки:</h2> -->
-                <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Видео изготовления гибкой упаковки:</h1>
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 pb-4 mb-5 border-bottom text-center">Видео
+                  изготовления гибкой упаковки:</h1>
 
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center py-1">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/1.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center py-1">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/2.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center py-1">
                   <video class="rounded" width="200" height="350" controls muted>
                     <source src="${ require('src/assets/images/3.mp4') }" type="video/mp4">
                     Браузер не поддерживает видео
                   </video>
                 </div>
-              <div class="pt-5 text-center">
-                  <a href="tel:+79016348239" class="btn btn-success btn-lg text-center text-uppercase">Заказать печать гибкой упаковки</a>
-              </div>
+                <div class="pt-5 text-center">
+                  <a href="tel:+79391110534" class="btn btn-success btn-lg text-center text-uppercase d-block d-sm-none">Заказать печать
+                    гибкой упаковки</a>
+                </div>
               </div>
               ${ require('src/html/partials/partners.html') }
               ${ require('src/html/partials/delivery.html') }

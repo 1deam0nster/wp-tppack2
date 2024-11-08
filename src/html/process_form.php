@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Валидация
     if (!empty($phone)) {
         // Настройки для отправки письма
-        $to = "tppackru@yandex.ru"; // Замените на ваш email
+        $to = "toppress-zakaz@yandex.ru"; // Замените на ваш email
         $subject = "Запрос обратного звонка";
         $headers = "From: no-reply@example.com\r\n";
         $fullMessage = "Пользователь оставил номер телефона: $phone";
