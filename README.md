@@ -1,5 +1,4 @@
-# FRONTEND BOILERPLATE
-
+# Репозиторий сайта tp-pack.ru
 [![Bootstrap](https://img.shields.io/static/v1?label=Bootstrap&message=5.0.1&color=blueviolet)](https://getbootstrap.com)
 [![FontAwesome](https://img.shields.io/static/v1?label=FontAwesome&message=4.7.0&color=brightgreen)](http://fontawesome.com/v4.7.0)
 [![Bootstrap](https://img.shields.io/static/v1?label=jQuery&message=3.6.0&color=orange)](http://jquery.com)
@@ -48,6 +47,7 @@ Its Done.
 * `yarn clean` or `npm run clean` ─ cleanup previous build files in /dist folder.
 * `yarn lint:js` or `npm run lint:js` ─  this command will lint all js files based on ```.eslintrc.js```.
 * `yarn lint:style` or `npm run lint:style` ─ This command will lint all style files based on ```.stylelintrc.js```
+
 
 ## Structure
 
