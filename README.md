@@ -1,57 +1,23 @@
 # Репозиторий сайта tp-pack.ru
-[![Bootstrap](https://img.shields.io/static/v1?label=Bootstrap&message=5.0.1&color=blueviolet)](https://getbootstrap.com)
-[![FontAwesome](https://img.shields.io/static/v1?label=FontAwesome&message=4.7.0&color=brightgreen)](http://fontawesome.com/v4.7.0)
-[![Bootstrap](https://img.shields.io/static/v1?label=jQuery&message=3.6.0&color=orange)](http://jquery.com)
-[![Webpack](https://img.shields.io/static/v1?label=Webpack&message=5&color=83c6e8)](https://webpack.js.org)
-[![BrowserSync](https://img.shields.io/static/v1?label=BrowserSync&message=2&color=red)](https://browsersync.io)
-[![license](https://img.shields.io/static/v1?label=Licence&message=MIT&color=blue)](https://raw.githubusercontent.com/smarteist/Frontent-Starter-Boilerplate/master/LICENSE)
+## Установка
 
-![Image](https://raw.githubusercontent.com/smarteist/Frontent-Starter-Boilerplate/master/src/assets/images/favicon.ico)
-
-This boilerplate uses [Webpack](https://webpack.js.org/) boundler and its dev server helps you build web apps and sites much faster.
-this project also uses [Bootstrap](https://getbootstrap.com/) , and a modern development workflow.
-
-## Features
-
-* **Live reloading** Time-saving synchronised browser update after changes by using [BrowserSync](https://browsersync.io/).
-* **Automatically optimization** entry files <br> concatenate, minify and inject output files to HTML
-* **[Sass](https://sass-lang.com/) for stylesheets** <br> with [the 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern)
-* **[Webpack 5](https://webpack.js.org/)** a good configuration - module bundler
-* **[Bootstrap 5](http://getbootstrap.com/)** - the most popular HTML, CSS and JS framework
-* **[jQuery 3.6.0](http://jquery.com/)** - JavaScript library
-* **[Font Awesome 4.7](https://fontawesome.com/v4.7.0/icons/)** - the web's most popular vector icons and social logos
+1. Установи [Node.js](http://nodejs.org/).
+2. Возможно собрать так же с помошью [yarn](https://yarnpkg.com/en/docs/install)
+3. Скопируй репозиторий `git clone https://github.com/1deam0nster/wp-tppack2.git`.
+4. Открой папку с репозиторием и введи `npm install` или если установил yarn `yarn`. 
 
 
-## Theme development
+#### Доступные команды
 
-[Node.js](http://nodejs.org/) and npm is required dependency to work with *this starter*.
-<br><br>
-You can optionally use [Yarn](https://yarnpkg.com/en/) package manager as well.
+* `yarn start` or `npm run start` ─ Запуск dev сервера.
+* `yarn build` or `npm run build` ─ Скомпилировать без сжатия и оптимизации.
+* `yarn build:production` or `npm run build:production` ─ Скомпилировать и сжать файлы для продакшены.
+* `yarn clean` or `npm run clean` ─ Очистка папки билд.
+* `yarn lint:js` or `npm run lint:js` ─  Линтинг JS основанный ```.eslintrc.js```.
+* `yarn lint:style` or `npm run lint:style` ─ Линтинг CSS основанный ```.stylelintrc.js```
+* `yarn webp` or `npm run webp` ─  Сжать изображения и перевести в формат webp.
 
-
-#### Installation
-
-1. Install [Node.js](http://nodejs.org/) (installation depends on operation system).
-([npm is distributed with Node.js](https://www.npmjs.com/get-npm)).
-2. It is recommended to install the latest version of yarn. [How to install yarn?](https://yarnpkg.com/en/docs/install)
-3. Clone the repo using `git clone https://github.com/smarteist/Frontent-Starter-Boilerplate.git`.
-4. Open project folder and run `npm install` command or if you installed yarn `yarn`. 
-
-Its Done.
-
-#### Build commands
-
-* `yarn start` or `npm run start` ─ webpack can watch files and recompile whenever they change, and start [BrowserSync](https://browsersync.io/) server session.
-* `yarn build` or `npm run build` ─ compile assets without any compression or optimization.
-* `yarn build:production` or `npm run build:production` ─ compile and optimize (the files in your assets directory) for production.
-* `yarn clean` or `npm run clean` ─ cleanup previous build files in /dist folder.
-* `yarn lint:js` or `npm run lint:js` ─  this command will lint all js files based on ```.eslintrc.js```.
-* `yarn lint:style` or `npm run lint:style` ─ This command will lint all style files based on ```.stylelintrc.js```
-
-
-## Structure
-
-Shorten directories and files structure which you'll see after build: 
+## Структура проекта
 
 ```shell
 ▼ project/
@@ -92,7 +58,3 @@ Shorten directories and files structure which you'll see after build:
 ├── package-lock.json      # Node.js dependencies lock file (don't edit)
 └── [...]                  # other files
 ```
-
-## License
-
-Code released under the [MIT license](https://raw.githubusercontent.com/smarteist/Frontent-Starter-Boilerplate/master/LICENSE).
